@@ -1,0 +1,89 @@
+$background: transparent;
+$select-color: #7b7b7b;
+$select-background: transparent;
+$select-width: 220px;
+$select-height: 40px; 
+
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: $select-color;
+  width: $select-width;
+  height: $select-height;
+}
+.select-styled {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $select-background;
+  padding: 8px 15px;
+  transition: all 0.2s ease-in;
+  &:after {
+    content:"\f107";
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-family: $iconFont;
+    @include transition;
+    transform-origin: center center;
+    transform: rotateX(0deg);
+  }
+  &:hover {
+    background-color: darken($select-background, 2);
+  }
+  &:active, &.active {
+    background-color: darken($select-background, 5);
+    &:after {
+      transform: rotateX(180deg);
+      color: $color-primary;
+    }
+  }
+  &.active {
+    color: $color-primary;
+  }
+}
+
+.select-options {
+  display: none; 
+  position: absolute;
+  top: calc(100% + 20px);
+  left: -50%;
+  min-width: 200px;
+  z-index: 999;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -8px;
+    left: 50%;
+    @include equal-size(16px);
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+  }
+  li {
+    padding: 15px;
+    border-top: 1px solid darken($select-background, 10);
+    @include transition;
+    color: $color-white;
+    &:hover {
+      background: darken($color: $color-primary, $amount: 10);
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
+
+.select-options ,
+.select-options::before {
+  background-color: $color-primary;
+}

@@ -1,0 +1,15 @@
+.breadcrumbs {
+    > li {
+        > a {
+            color: $color-white;
+        }
+        &:not(:first-child) {
+            position: relative;
+            &::before {
+                content: "/";
+                padding: 0 3px;
+                display: inline-block;
+            }
+        }
+    }
+}

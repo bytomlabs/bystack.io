@@ -1,0 +1,15 @@
+.watermark-icon {
+    position: absolute;
+    right: -48px;
+    top: -30px;
+    color: rgba($color: $color-white, $alpha: .1);
+    font-size: rem(170px);
+    z-index: -1;
+}
+
+/* round avatar */
+.round-avatar {
+    > img {
+        border-radius: 100%;
+    }
+}

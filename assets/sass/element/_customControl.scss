@@ -1,0 +1,79 @@
+/* custom control */ 
+.custom-control {
+	line-height: 1;
+	min-height: 100%;
+	.custom-control-label::after,
+	.custom-control-label::before {
+		@include equal-size(14px);
+		top: 2px;
+		transition: all .4s cubic-bezier(0.77, 0, 0.175, 1);
+	}
+	.custom-control-label::after {
+		transform: scale(0)
+	}
+	.custom-control-input:checked~.custom-control-label::after {
+		transform: scale(1);
+	}
+	.custom-control-input:checked~.custom-control-label::before {
+		border-color: $color-primary;
+		background-color: $color-primary;
+	}
+	.custom-control-label::before {
+		background-color: $color-white;
+        border: 1px solid #afb6d2;
+        pointer-events: visible;
+		cursor: pointer;
+		border: {
+			radius: 0px;
+		}
+	}
+	.custom-control-input:focus~.custom-control-label::before {
+		box-shadow: none;
+	}
+	.custom-control-label {
+		margin-bottom: 0;
+		font-size: rem(15px);
+		color: #70799f;
+        user-select: none;
+		cursor: pointer;
+		line-height: 1;
+	}
+}
+
+
+.custom_number {
+	position: relative;
+	height: 37px;
+	width: 162px;
+	user-select: none;
+	margin: 0 auto;
+	.sub,
+	.add {
+		float: left;
+		width: 50px;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: all .4s ease;
+	}
+	.add {
+		float: right;
+	}
+	input[type="number"] {
+		height: 100%;
+		width: auto;
+		background-color: $color-white;
+		text-align: center;
+		pointer-events: none;
+		@include my-borders();
+		width: 62px;
+		color: $bColor;
+	}
+	input[type="number"]::-webkit-inner-spin-button, 
+	input[type="number"]::-webkit-outer-spin-button { 
+		-webkit-appearance: none; 
+		margin: 0; 
+	}
+}

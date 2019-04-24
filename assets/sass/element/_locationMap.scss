@@ -1,0 +1,105 @@
+.location {
+    display: inline-block;
+}
+$size: 15px;
+.location_indicator {
+    position: relative;
+    @include equal-size($size);
+    background-color: $color-primary;
+    border-radius: 50%;
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        @include center-position(50%);
+        height: 100%;
+        width: 100%;
+        background-color: $color-primary;
+        border-radius: 50%;
+        animation: pulse 3s infinite cubic-bezier(0.4, 0, 1, 1) both;
+    }
+    &::after {
+        animation-delay: .5s;
+    }
+}
+
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(12, 90, 219, 0.2); 
+    }
+    70% {
+      box-shadow: 0 0 0 ($size * 2) rgba(12, 90, 219, 0); 
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(12, 90, 219, 0); 
+    } 
+}
+
+.tooltip  {
+    &.show {
+        opacity: 1;
+    }
+    .tooltip-inner {
+        padding: 15px;
+        width: 100%;
+        max-width: 300px;
+        text-align: left;
+        background-color: $color-white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+}
+.location-name {
+    font-size: rem(18px);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.location-des {
+    margin-bottom: 0;
+    color: $color-black;
+}
+.tooltip .arrow::before {
+    color: $color-white;
+}
+.bs-tooltip-auto[x-placement^=top] .arrow::before, 
+.bs-tooltip-top .arrow::before  {
+    border-top-color: currentColor;
+}
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, 
+.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: currentColor;
+}
+.bs-tooltip-auto[x-placement^=right] .arrow::before, 
+.bs-tooltip-right .arrow::before {
+    border-right-color: currentColor;
+}
+.bs-tooltip-auto[x-placement^=left] .arrow::before, 
+.bs-tooltip-left .arrow::before {
+    border-left-color: currentColor;
+}
+
+.location-groups {
+    position: relative;
+    .location {
+        position: absolute;
+        &.location-1 {
+            top: 29%;
+            left: 15%;
+        }
+        &.location-2 {
+            top: 51%;
+            left: 50%;
+        }
+        &.location-3 {
+            right: 20%;
+            top: 20%;
+        }
+        &.location-4 {
+            top: 10%;
+            left: 35%;
+        }
+        &.location-5 {
+            left: 30%;
+            bottom: 24%;
+        }
+    }
+}

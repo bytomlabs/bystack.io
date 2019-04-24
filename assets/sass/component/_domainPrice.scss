@@ -1,0 +1,74 @@
+.xs-table {
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.08);
+    background-color: $color-white;
+    margin-bottom: 0px;
+    .domain-pricing-header {
+        th {
+            width: 25%;
+            background-color: transparent;
+            border: 0px;
+            color: $color-white;
+            padding: 17px 10px;
+            font-size: rem(20px);
+        }
+        tr {
+            @include gradient-four();
+        }
+    }
+    td,  th {
+        text-align: center;
+        padding: 15px 10px;
+    }
+    tbody {
+        tr {
+            th, td {
+                @include my-border('right');
+                @include my-border('top');
+            }
+            td:last-child  {
+                border-right: 0px;
+            }
+            &:first-child {
+                th, td {
+                    border-top: 0px;
+                }
+            }
+            td {
+                letter-spacing: -.4px;
+                > del {
+                    color: #a4afdf;
+                    font-size: rem(14px);
+                    padding-left: 3px;
+                }
+            }
+        }
+    }
+    &.fixed-column {
+        position: absolute;
+        left: 15px;
+        width: 83px;
+        display: inline-block;
+        z-index: 1;
+        box-shadow: none;
+    }
+}
+@media(min-width: 576px) {
+    .xs-table.fixed-column {
+        display: none;
+    }
+}
+@media (max-width: 576px) {
+    .xs-table:not(.fixed-column) tr th:first-child {
+        display: none; 
+    }
+    .xs-table:not(.fixed-column) {
+        position: relative;
+        left: 83px;
+    }
+}
+
+.domain-price-v2 {
+    .xs-table .domain-pricing-header tr {
+        @include gradient-eleven();
+    }
+}

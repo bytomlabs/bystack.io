@@ -1,0 +1,37 @@
+.office-interface-group-content {
+    &.content-2 {
+        margin-right: 30px;
+    }
+    &.content-1 {
+        margin-top: -75px;
+    }
+    > img {
+        width: 100%;
+    }
+}
+
+.office-interface-group-content,
+.join-with-us-wraper {
+    margin-bottom: 30px;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.join-with-us-wraper {
+    min-height: 389px;
+    background-color: $color-primary;
+    margin-top: 45px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px 95px;
+    display: flex;
+    align-items: center;
+    .join-with-us-content {
+        h2 {
+            color: $color-white;
+            font-size: rem(36px);
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+    }
+}

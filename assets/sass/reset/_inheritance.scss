@@ -1,0 +1,138 @@
+$section-padding: 100px;
+.xs-section-padding {
+	padding: $section-padding 0;
+}
+.xs-section-padding-bottom {
+	padding-bottom: $section-padding;
+}
+.xs-section-padding-top {
+	padding-top: $section-padding;
+}
+
+@for $i from 0 through 10 {
+	.xs-mb-#{$i} {
+		margin-bottom: $i * 10px;
+	}
+	.xs-pb-#{$i} {
+		padding-bottom: $i * 10px;
+	}
+}
+
+.xs-margin-0 {
+	margin: 0;
+}
+// xs padding 
+.xs-padding-0 {
+	padding: 0;
+}
+
+// overlay list
+.xs-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: .5;
+	z-index: 0;
+}
+
+.parallax-window {
+	background-attachment: fixed;
+}
+
+// color list
+// first color name and second your selected color
+$colorList: (black, $color-black),
+			(white, $color-white),
+			(primary, $color-primary),
+			(secondary, $color-secondary),
+			(gray, #f8fafe);
+@each $colorName, $color in $colorList {
+	/* color */
+	.xs-color-#{$colorName} {
+		color: $color; 
+	}
+	/* background color */
+	.xs-bg-#{$colorName} {
+		background-color: $color; 
+	}
+}
+
+/* remove from control focus box shadow */
+.form-control {
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+
+p,span,small,strong, a {
+	letter-spacing: $letterSpacing;
+}
+h1,h2,h3,h4 {
+	font-family: $titleFont;
+}
+h1,h2,h3,h4,h5,h6 {
+	color: $titleColor;
+}
+a {
+	color: $linkColor;
+}
+
+.xs-title ,
+h4 {
+	font-size: rem(24px);
+	font-weight: 500;
+	margin-bottom: 16px;
+	&.small {
+		font-size: rem(20px);
+	}
+	a {
+		color: $titleColor;
+		display: inline-block;
+		@include transition;
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+/* bootstrap nav style reset */
+.nav-tabs {
+	border-bottom: 0px;
+}
+
+/* owl image preset */
+.owl-carousel .owl-item img {
+	width: auto;
+}
+
+/* gradinet bg */
+.bg-gradient {
+	@include gradient-one();
+	.heading-sub-title ,
+	.heading-title ,
+	.heading-title span {
+		color: $color-white;
+	}
+}
+
+/* tab pane animation */
+.tab-pane.animated {
+	animation-duration: 1.5s;
+}
+
+/* remove iframe box shadow and background */
+.mfp-iframe-scaler iframe {
+	box-shadow: none;
+	background: transparent;
+}
+
+img {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}

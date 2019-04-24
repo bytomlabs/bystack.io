@@ -1,0 +1,17 @@
+.xs-client-slider {
+    cursor: e-resize;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.single-client {
+    min-height: 200px;
+    @include flex-position(flex, center, center);
+    > img {
+        filter: grayscale(100%);
+        @include transition();
+        cursor: pointer;
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+}

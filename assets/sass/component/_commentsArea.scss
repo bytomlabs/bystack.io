@@ -1,0 +1,89 @@
+.xs-comments-area {
+    margin-bottom: 50px;
+    .comments-title {
+        margin-bottom: 30px;
+    }
+    .comment-body {
+        &:before {
+            display: table;
+            content: "";
+            clear: both;
+        }
+        img {
+            @include equal-size(80px);
+            border-radius: 100%;
+            float: left;
+        }
+    }
+    .meta-data {
+        margin-left: 100px;
+    }
+    .reply {
+        float: right;
+        .comment-reply-link {
+            color: #626c84;
+            font-size: rem(15px);
+            i {
+                color: #252a37;
+                font-size: rem(16px);
+                padding-right: 10px;
+            }
+        }
+    }
+    .comment-author {
+        a {
+            font-size: rem(18px);
+            color: $titleColor;
+            font-family: $titleFont;
+            font-weight: 500;
+        }
+    }
+    .comment-date {
+        color: #626c84;
+        margin-bottom: 0px;
+        font-size: rem(15px);
+    }
+    .comment-content {
+        margin-top: 10px;
+        p {
+            margin-bottom: 0px;
+        }
+    }
+    .comment:not(:last-child ) {
+        .children {
+            margin-left: 100px;
+            .meta-data {
+                background-color: #f7f9fd;
+                padding: 30px;
+                margin-bottom: 0px;
+                border-bottom: 0px;
+            }
+        }
+    }
+}
+
+.xs-comments-area .comment:not(:last-child) .meta-data,
+.xs-comments-area .comment:not(:last-child) .children {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.comment-respond {
+    .comment-reply-title {
+        margin-bottom: 35px;
+    }
+    .xs-form .form-control:last-child, 
+    .xs-form .form-control + .select:last-child ,
+    .xs-form .form-control, 
+    .xs-form .form-control + .select{
+        margin-bottom: 20px;
+    }
+    .xs-form textarea.form-control {
+        margin-bottom: 40px;
+    }
+    .form-submit {
+        margin-bottom: 0px;
+        text-align: right;
+    }
+}

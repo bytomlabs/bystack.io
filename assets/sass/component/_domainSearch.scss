@@ -1,0 +1,184 @@
+.domain-search-form-group {
+    padding: 50px;
+    background-color: $color-white;
+    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.07);
+}
+  
+.xs-domain-info {
+    text-align: center;
+    li {
+        display: inline-block;
+        margin-right: 45px;
+        padding-right: 45px;
+        border-right: 1px solid rgba($color: #475dff, $alpha: .25);
+        img {
+            margin-right: 14px;
+        }
+        &:last-child {
+            margin-right: 0px;
+            border-right: 0px;
+            border-right: 0px;
+        }
+    }
+}
+
+.domain-search-form {
+    width: calc(100% - 320px);
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+    height: 73px;
+    z-index: 9;
+    input:not([type="submit"]) {
+        border-radius: rem(37.5px);
+        width: 100%;
+        height: 100%;
+        border: 0px;
+        padding: 0 32px;
+        box-shadow: 0px 10px 45px 0px rgba(0, 0, 0, 0.06);
+        border: 1px solid #f5f3f3;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #7b7b7b;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: #7b7b7b;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        color: #7b7b7b;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: #7b7b7b;
+    }
+    .select-group {
+        position: absolute;
+        right: 10px;
+        height: 100%;
+        width: 230px;
+        display: flex;
+        align-items: center;
+        top: 0px;
+    }
+    input[type="submit"] {
+        border: 0px;
+        background-color: $color-primary;
+        border-radius: rem(27.5px);
+        color: $color-white;
+        padding: 14px 37px;
+        cursor: pointer;
+        @include transition;
+        &:hover {
+            background-color: darken($color: $color-primary, $amount: 10);
+        }
+    }
+    .select-styled {
+        width: 75px;
+    }
+    .select {
+        height: 29px;
+        width: 100%;
+        .select-styled {
+            padding: 0px;
+        }
+    }
+    .search-btn {
+        background-color: transparent;
+        border: 0px;
+        color: #000000;
+        font-size: rem(15.02px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 28px 32px 28px 20px;
+        text-align: center;
+        line-height: 1;
+        cursor: pointer;
+    }
+    &.version-2 {
+        width: 100%;
+        max-width: 540px;
+        margin-bottom: 30px;
+        .select-group {
+            right: inherit;
+            left: 0px;
+            width: 130px;
+            &::before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                width: 1px;
+                height: 44.06px;
+                background-color: #e7e7e7;
+                border-radius: .5px;
+            }
+        }
+        .select {
+            color: #000000;
+        }
+        input:not([type="submit"]) {
+            padding-left: 163px;
+        }
+        .select-styled {
+            width: 115px;
+        }
+    }
+}
+.xs-domain-search {
+    position: relative;
+    z-index: 9;
+}
+
+.xs-banner:not(.inner-banner) {
+    + .xs-domain-search {
+        margin-top: -124px;
+    }
+    &.banner-v3 {
+        + .xs-domain-search {
+            margin-top: 0px;
+        }
+    }
+}
+
+.xs-domain-search {
+    &.domainSearch-v2 {
+        background-color: #f8fafe;
+        .domain-search-form-group {
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+}
+
+.xs-domain-search {
+    &.domainSearch-2  {
+        .domain-search-form {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.domain-box-list {
+    li {
+        display: inline-block;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.102);
+        padding: 13px 26px;
+        text-align: left;
+        font-size: rem(18.02px);
+        color: #fefefe;
+        line-height: 1;
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+        hr {
+            margin: 12px 0;
+            background-color: rgb(255, 255, 255);
+            opacity: 0.2;
+            width: 16px;
+            height: 3px;
+            display: block;
+        }
+    }
+}

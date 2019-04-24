@@ -1,0 +1,78 @@
+.main-nav-tab {
+    box-shadow: 0px 20px 45px 0px rgba(0, 0, 0, 0.08);
+    border-radius: rem(27.5px);
+    max-width: 260px;
+    margin: 0 auto;
+    background-color: $color-white;
+    justify-content: center;
+    padding: 5px 0;
+    z-index: 1;
+    position: relative;
+    li {
+        display: inline-block;
+        a {
+            display: block;
+            color: #5f5f5f;
+            min-width: 125px;
+            @include transition;
+            padding: 8px 31px;
+            text-align: center;
+            &.active {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.main-nav-tab li a,
+.tab-swipe .indicator {
+    border-radius: rem(23px);
+}
+
+.tab-swipe {
+    position: relative;
+    .indicator {
+        background-color: $color-primary;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        transition: all .6s ease;
+        height: calc(100% - 10px);
+    }
+}
+
+
+.main-nav-tab-2 {
+    margin-bottom: 50px;
+    &.nav-tabs {
+        border-bottom: 1px solid rgba($color: #09d0c9, $alpha: .25);
+    }
+    li {
+        width: calc(100% / 4);
+        a {
+            display: block;
+            text-align: center;
+            color: $color-white;
+            font-family: $titleFont;
+            font-size: rem(20px);
+            font-weight: 500;
+            padding-bottom: 40px;
+            > p {
+                min-height: 46px;
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &.tab-swipe .indicator {
+        top: inherit;
+        transform: none;
+        bottom: -1px;
+        border-radius: 0px;
+        height: 2px;
+        background-color: #09d0c9;
+    }
+}

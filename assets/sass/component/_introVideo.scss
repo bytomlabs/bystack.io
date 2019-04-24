@@ -1,0 +1,15 @@
+.intro-video {  
+    position: relative;
+    box-shadow: 0px 10px 30px 0px rgba(16, 61, 190, 0.159);
+    overflow: hidden;
+    border-radius: 5px;
+    .xs-overlay {
+        opacity: .6;
+    }
+}
+.video-pop-up-content {
+    position: absolute;
+    @include center-position(50%);
+    z-index: 1;
+    padding: 10px;
+}

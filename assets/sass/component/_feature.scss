@@ -1,0 +1,55 @@
+.call-to-action-section + .xs-feature-section {
+	margin-top: -120px;
+	position: relative;
+	z-index: 1;
+}
+
+.xs-feature-group {
+	background-color: $color-primary;
+	box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.08);
+	padding: 40px 36px 40px 20px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	.xs-title,
+	p {
+		color: $color-white;
+	}
+	p {
+		margin-bottom: 25px;
+	}
+	.feature-img {
+		min-width: 138px;
+		margin-right: 14px;
+	}
+	.xs-btn-wraper {
+		text-align: right;
+	}
+	.btn {
+		padding: 10px 30px;
+	}
+}
+
+/* feature version 2 */
+.feature-v2 {
+	.xs-feature-group {
+		box-shadow: 0px -10px 25px 0px rgba(0, 0, 0, 0.04);
+		background-color: $color-white;
+		.xs-title {
+			color: $titleColor;
+		}
+		p {
+			color: $bColor;
+		}
+		.btn {
+			box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+		}
+	}
+}
+
+/* feature version 3 */
+.feature-v3 {
+	.xs-feature-group {
+		@include gradient-ten();
+	}
+}

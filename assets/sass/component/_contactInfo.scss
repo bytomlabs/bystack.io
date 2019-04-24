@@ -1,0 +1,20 @@
+.contact-info-group {
+    padding: 27px 35px 35px;
+    min-height: 275px;
+    text-align: center;
+    background-color: $color-white;
+    @include transition;
+    .contact-info-icon {
+        min-height: 110px;
+        margin-bottom: 10px;
+    }
+    > span ,
+    > a {
+        display: block;
+        color: $bColor;
+    }
+    &:hover,
+    &.active {
+        box-shadow: 0px 3px 33.6px 1.4px rgba(0, 0, 0, 0.1);
+    }
+}

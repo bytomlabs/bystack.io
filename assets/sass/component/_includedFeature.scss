@@ -1,0 +1,15 @@
+.feature-image-content {
+    text-align: center;
+}
+
+.feature-text-content {
+    padding-right: 30px;
+    > .content-title ,
+    p {
+        color: $color-white;
+        margin-bottom: 0px;
+    }
+    .content-title {
+        margin-bottom: 25px;    
+    }
+}

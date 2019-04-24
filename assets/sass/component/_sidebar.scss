@@ -1,0 +1,120 @@
+.xs-serach {
+    position: relative;
+    input:not([type="submit"]) {
+        height: 53px;
+        padding: 0 30px;
+        @include my-borders();
+        background-color: $color-white;
+        border-radius: 27.5px;
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.08);
+        width: 100%;
+    }
+    .search-btn {
+        width: 62px;
+        background-color: $color-primary;
+        border: 0px;
+        font-size: rem(18px);
+        color: $color-white;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        border-radius: 0 27.5px 27.5px 0;
+        height: 100%;
+        cursor: pointer;
+        @include transition;
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+}
+
+.widget {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .xs-title {
+        margin-bottom: 40px;
+    }
+    &:not(.widget-search) {
+        padding: 40px;
+        @include my-borders();
+    }
+}
+.widget-posts {
+    .widget-post {
+        &:not(:last-child) {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            @include my-border('bottom');
+        }
+        img {
+            padding-right: 20px;
+        }
+        .post-meta-date {
+            color: #626c84;
+        }
+        .post-meta-date ,
+        .post-author {
+            font-size: rem(15px);
+        }
+        .entry-title {
+            font-size: rem(17px);
+            font-weight: 700;
+            margin-bottom: 0px;
+            a {
+                color: $titleColor;
+                @include transition;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
+
+.list-group {
+    li {
+        position: relative;
+        a , span {
+            color: $bColor;
+        }
+        span {
+            position: absolute;
+            right: 0px;
+        }
+        a {
+            @include transition;
+        }
+        a:hover {
+            color: $color-primary;
+        }
+        &:not(:last-child) {
+            @include my-border('bottom');
+            padding-bottom: 14px;
+            margin-bottom: 14px;
+        }
+    }
+}
+
+.tag-lists {
+    a {
+        display: inline-block;
+        padding: 7px 14px;
+        color: #626c84;
+        @include my-borders();
+        border-radius: rem(20px);
+        font-size: rem(15px);
+        margin-right: 6px;
+        margin-bottom: 9px;
+        @include transition;
+        &:hover {
+            color: $color-primary;
+            border-color: currentColor;
+        }
+    }
+    .title {
+        color: $titleColor;
+        padding-right: 15px;
+        font-weight: 700;
+    }
+}

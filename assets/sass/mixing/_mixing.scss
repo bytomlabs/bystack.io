@@ -1,0 +1,108 @@
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
+
+//usage: @include shift([property],[duration],[easing]);
+@mixin transition($property: all, $duration: .4s, $ease: ease){
+	transition: $property $duration $ease;
+}
+
+@mixin background-content($repeat: no-repeat, $size: cover, $position: center center) {
+	background-repeat: $repeat;
+	background-size: $size;
+	background-position: $position;
+}
+
+@mixin background-color($color) {
+	background-color: $color;
+}
+
+@mixin width($width) {
+	width: $width;
+}
+
+@mixin equal-size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin equal-size-lineHeight($width, $height: $width, $Lheight: $width) {
+	width: $width;
+	height: $height;
+	line-height: $Lheight;
+}
+
+@mixin flex-position($display, $contet, $items) {
+	display: $display;
+	justify-content: $contet;
+	align-items: $items;
+}
+
+@mixin position($position) {
+	position: $position;
+}
+
+@mixin center-position($top: $top, $left: $top) {
+	top: $top;
+	left: $top;
+	transform: translate(-#{$top}, -#{$top});
+}
+
+@mixin border($direction, $width, $style, $color) {
+	border-#{$direction}: $width $style $color;
+}
+
+@mixin borders($width, $style, $color) {
+	border: $width $style $color;
+}
+
+@mixin my-border($direction) {
+	@include border($direction, 1px, solid, #eaeaea);
+}
+
+@mixin my-borders() {
+	@include borders(1px, solid, #eaeaea);
+}
+
+@mixin altFont {
+	font-family: 'Pacifico', cursive;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+	background: nth(nth($color-stops, 1), 1);
+	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+	background: linear-gradient($direction, $color-stops);
+}
+@mixin gradient-one() {
+	@include linear-gradient(-45deg, rgba(16,69,219,1) 0%, rgba(21,9,94,1) 60%, rgba(21,9,94,1) 99%);
+}
+@mixin gradient-two() {
+	@include linear-gradient(-45deg, rgb(10,159,254) 0%, rgb(17,36,217) 100%);
+}
+@mixin gradient-three() {
+	@include linear-gradient(0deg, rgb(248,250,254) 8%, rgba(248,250,254,0.95) 12%, rgba(252,253,255,0.29) 73%, rgba(255,255,255,0) 100%);
+}
+@mixin gradient-four() {
+	@include linear-gradient(45deg, rgb(16,61,190) 0%, rgb(19,35,142) 32%, rgb(21,9,94) 99%);
+}
+@mixin gradient-five() {
+	@include linear-gradient(0deg, rgb(0,0,0) 0%, rgba(37,42,55,0) 100%);
+}
+@mixin gradient-six() {
+	@include linear-gradient(90deg, rgb(21,9,94) 1%, rgb(19,39,157) 68%, rgb(16,69,219) 100%);
+}
+@mixin gradient-seven() {
+	@include linear-gradient(45deg, rgb(137,159,223) 0%, rgb(138,146,199) 32%, rgb(138,132,174) 99%);
+}
+@mixin gradient-eight() {
+	@include linear-gradient(to left top, #1045db, #1e2aba, #022e9e, #0016b5, #123fbf);
+}
+@mixin gradient-nine() {
+	@include linear-gradient(to left, rgb(22,51,255) 0%, rgb(0,105,255) 100%);
+}
+@mixin gradient-ten() {
+	@include linear-gradient(to top, rgb(22,51,255) 0%, rgb(0,105,255) 100%);
+}
+@mixin gradient-eleven () {
+	@include linear-gradient(to bottom, #0217af 0%, #0055ce 100%);
+}

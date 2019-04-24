@@ -1,0 +1,17 @@
+.terms-wraper {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.order-list {
+    padding-left: 0px;
+    margin-bottom: 0px;
+    li {
+        list-style: decimal;
+        list-style-position: inside;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}

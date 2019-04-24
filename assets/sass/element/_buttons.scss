@@ -1,0 +1,215 @@
+.btn:not([class*=btn-outline]) {
+    border: 0px;
+}
+.btn-primary {
+    background-color: $color-primary;
+    &:hover {
+        &::before {
+            background-color: $color-secondary;
+        }
+    }
+}
+.btn-secondary {
+    background-color: $color-white;
+    color: $color-primary;
+    box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+    &:hover {
+        &::before {
+            background-color: $color-primary;
+        }
+    }
+}
+.btn-outline-secondary {
+    border-color: $color-primary;
+    color: $color-primary;
+    &:hover {
+        border-color: $color-secondary;
+        &::before {
+            background-color: $color-secondary;
+        }
+    }
+}
+.btn {
+    border-radius: rem(27.5px);
+    padding: 14px 45px;
+    position: relative;
+    letter-spacing: -.4px;
+    overflow: hidden;
+    transition: all 0.6s;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.6s;
+        transform: scale(0, 1);
+    }
+    &:hover::before {
+        transform: scale(1, 1);
+    }
+    .icon-right {
+        i {
+            padding-left: 10px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+.xs-btn-wraper {
+    .btn {
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+.btn-outline-primary {
+    color: $color-white;
+    border-color: $color-white;
+    &:hover {
+        border-color: $color-primary;
+        &::before {
+            background-color: $color-primary;
+        }
+    }
+}
+
+.join-with-us-content {
+    .btn {
+        &:hover {
+            &::before {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+input.btn-primary {
+    &:hover {
+        background-color: $color-secondary;
+    }
+}
+input.btn-secondary {
+    &:hover {
+        background-color: $color-primary;
+    }
+}
+input.btn-outline-secondary {
+    &:hover {
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+}
+
+.xs-feature-group {
+    .btn-secondary {
+        &:hover {
+            &::before {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+.preloader-cancel-btn {
+    .btn-secondary {
+        &:hover {
+            &::before {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+.simple-btn {
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1;
+    i {
+        font-size: rem(10px);
+        margin-top: 4px;
+    }
+    &.icon-right {
+        i {
+            float: right;
+            padding-left: 8px;
+        }
+    }
+    &.icon-left {
+        i {
+            float: left;
+            padding-right: 8px;
+        }
+    }
+}
+
+.expand-btn {
+    min-width: 180px;
+    padding: {
+        left: 40px;
+        right: 0px;
+    };
+    text-align: left;
+    > i {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: center center;
+        @include equal-size-lineHeight(39px, $Lheight: 38px);
+        background-color: #2379f6;
+        text-align: center;
+        border-radius: 100%;
+        font-size: 15px;
+    }
+}
+
+.gloosy-btn {
+    display: block;
+    @include equal-size-lineHeight(75px, $Lheight:78px);
+    border-radius: 100%;
+    background-color: $color-white;
+    text-align: center;
+    font-size: rem(20px);
+    position: relative;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0%;
+        left: 0%;
+        transform-origin: center center;
+        border-radius: 100%;
+        height: 100%;
+        width: 100%;
+        // transform: scale(1.5);
+        animation: pulse 1.5s linear .5s infinite both;
+        background-color: rgba($color: $color-white, $alpha: .25);
+        pointer-events: none;
+        z-index: -1;
+    }
+    > i {
+        @include gradient-four();
+        filter: drop-shadow(5px 0px 10px rgba(42, 95, 230, 0.35));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $color-primary;
+        margin-left: 4px;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}

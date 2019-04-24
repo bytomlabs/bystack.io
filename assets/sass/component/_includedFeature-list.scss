@@ -1,0 +1,43 @@
+.include-feature-list {
+    .hosting-info-list {
+        padding-left: 0px;
+        margin-bottom: 70px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .info-icon {
+        min-width: 52px;
+        padding-right: 25px;
+    }
+    .xs-title ,
+    p {
+        color: $color-white;
+    }
+    .xs-title {
+        margin-bottom: 17px;
+    }
+}
+
+.included-feature-list {
+    &.feature-list-v3 {
+        @include gradient-eight();
+    }
+    .wave_animation_wraper {
+        .wave {
+
+            &.four {
+                width: 434px;
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+/* for domain inner page */
+.xs-feature-section {
+    + .included-feature-list {
+        margin-top: -120px;
+        padding-top: 200px;
+    }
+}

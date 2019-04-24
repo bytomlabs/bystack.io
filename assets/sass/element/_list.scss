@@ -1,0 +1,28 @@
+.list-inline {
+    > li {
+        display: inline-block;
+    }
+}
+
+.xs-list {
+    li {
+        letter-spacing: $letterSpacing;
+        i {
+            padding-right: 5px;
+        }
+    }
+    &.check {
+        li {
+            position: relative;
+            &::before {
+                padding-right: 16px;
+                content: "\ea71";
+                font-family: $iconFont2;
+                color: $color-primary;
+                position: relative;
+                top: 3px;
+                font-size: rem(15px);
+            }
+        }
+    }
+}

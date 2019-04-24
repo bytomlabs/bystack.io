@@ -1,0 +1,139 @@
+.vps-slider-wraper {
+    background-color: $color-white;
+    box-shadow: 0px 20px 45px 0px rgba(0, 0, 0, 0.08);      
+}
+
+.vps-slider {
+    background-color: rgba($color: $color-white, $alpha: .102);
+    height: 7px;
+    border-radius: 0;
+    border: 0;
+    width: calc(100% - 15px);
+    margin: 0 auto;
+    .ui-widget-header {
+        background-color: $color-white;
+        border-radius: 0px;
+    }
+    .ui-slider-handle {
+        border-radius: 50%;
+        @include equal-size(20px);
+        background-color: $color-white;
+        border: 0px;
+        &::before {
+            position: absolute;
+            content: "";
+            @include center-position(50%);
+            @include equal-size(10px);
+            border-radius: 100%;
+            background-color: $color-secondary;
+        }
+    }
+}
+.slider-group {
+    background-color: $color-secondary;
+    padding: 50px;
+}
+
+.slider-range {
+    margin-top: 36px;
+}
+.slider-tigger {
+    position: relative;
+    padding-top: 40px;
+    margin: 0 auto;
+    float: left;
+    display: inline-block;
+    width: calc(calc(100% / 5) - 15px);
+    overflow: hidden;
+    cursor: pointer;
+    &:not(:last-child) {
+        margin-right: 15px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(../images/vps/range.png);
+        background-repeat: no-repeat;
+    }
+    h5 {
+        color: #5e73cc;
+        @include transition;
+        font-size: rem(18px);
+        font-weight: 500;
+        font-family: $titleFont;
+        margin-bottom: 0px;
+    }
+    &.current {
+        h5 {
+            color: $color-white;
+        }   
+    }
+}
+
+.slider-content-group {
+    padding: 80px 60px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.slider-container {
+    .title {
+        font-style: italic;
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+    .price {
+        color: $color-secondary;
+        font-size: rem(56px);
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+    .desc {
+        font-size: rem(15px);
+        margin-bottom: 36px;
+    }
+    .btn {
+        border-radius: 0px;
+        padding: 21px 47px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: $color-secondary;
+        font-family: $titleFont;
+        span {
+            position: relative;
+            top: 1px;
+            padding-right: 16px;
+        }
+    }
+}
+
+.vps-pricing-list {
+    > li {
+        max-width: calc(33.33333% - 60px);
+        width: 100%;
+        float: left;
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 60px;
+        }
+        > h4 {
+            font-size: rem(18px);
+            margin-bottom: 5px;
+        }
+        > p {
+            margin-bottom: 0px;
+            font-size: rem(15px);
+        }
+    }
+    &:not(:last-child) {
+        > li {
+            padding-bottom: 26px;
+            margin-bottom: 26px;
+            border-bottom: 1px solid #e7e7e7;
+        }
+    }
+}
