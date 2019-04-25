@@ -4,7 +4,11 @@ $(function(){
     console.log('submit');
     var email = $('#xs_contact_email').val();
     var name = $('#xs_contact_name').val();
-    var msg = $('#x_contact_massage').val();
+    var msg = $('#x_contact_massage').val() || 'bystack';
+    if(!email.trim() || !name.trim()){
+      layer.msg('请填写表单后提交');
+      return;
+    }
 
     const url = '//mc.us20.list-manage.com/subscribe/form-post-json?u=05d404619cf8ee88ee605c21c&id=fccb1911a5&popup=true';
     $.get(url + '&EMAIL=' + email + '&NAME=' + name + '&MSG' + msg).then(function(data){
