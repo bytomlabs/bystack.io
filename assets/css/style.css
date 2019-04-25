@@ -455,7 +455,7 @@ ul, li {
   background: -webkit-linear-gradient(135deg, #1045db 0%, #15095e 60%, #15095e 99%);
   background: -o-linear-gradient(135deg, #1045db 0%, #15095e 60%, #15095e 99%);
   background: linear-gradient(-45deg, #1045db 0%, #15095e 60%, #15095e 99%);
-  min-height: 900px;
+  min-height: 720px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,9 +470,9 @@ ul, li {
     margin-right: -126px;
     position: relative; }
   .xs-banner.banner-v2 {
-    background: -webkit-linear-gradient(45deg, #0a9ffe 0%, #0a9ffe 35%, #1124d9 70%, #1124d9 100%);
-    background: -o-linear-gradient(45deg, #0a9ffe 0%, #0a9ffe 35%, #1124d9 70%, #1124d9 100%);
-    background: linear-gradient(45deg, #0a9ffe 0%, #0a9ffe 35%, #1124d9 70%, #1124d9 100%); }
+    background: -webkit-linear-gradient(45deg,  #0a9ffe 35%, #1124d9 100%);
+    background: -o-linear-gradient(45deg,  #0a9ffe 35%, #1124d9 100%);
+    background: linear-gradient(45deg,  #0a9ffe 35%, #1124d9 100%) }
   .xs-banner.banner-v3 {
     min-height: 800px; }
   .xs-banner.banner-404 .xs-banner-image {
@@ -551,7 +551,9 @@ ul, li {
   color: #FFFFFF; }
 
 .xs-banner-content p {
-  margin-bottom: 40px; }
+  margin-bottom: 40px; 
+  line-height: 2.5em;
+}
 
 .banner-sub-title {
   font-size: 1.41176rem;
@@ -1202,7 +1204,7 @@ ul, li {
 .pricing-body {
   margin-bottom: 30px; }
   .pricing-body > p {
-    margin-bottom: 22px; }
+    margin-bottom: 22px; font-size: 15px; line-height: 2em;}
   .pricing-body .pricing-price > p {
     font-weight: 700;
     font-style: italic;
@@ -1317,7 +1319,8 @@ ul, li {
     min-height: 96px;
     margin-bottom: 20px; }
   .xs-service-block p {
-    margin-bottom: 15px; }
+    line-height: 2em;
+    margin-bottom: 15px; font-size: 15px;}
 
 .style-boxed .xs-service-block {
   padding: 60px;
@@ -1540,7 +1543,6 @@ ul, li {
   margin-bottom: 60px; }
 
 .hosting-info-list {
-  padding-left: 10px;
   margin-bottom: 30px; }
   .hosting-info-list .info-icon {
     min-width: 46px;
@@ -1807,7 +1809,7 @@ ul, li {
 .xs-blog-post .entry-title,
 .xs-blog-post .entry-meta,
 .xs-blog-post .post-meta {
-  padding: 0 30px; }
+  padding: 0 20px; }
 
 .xs-blog-post .post-meta {
   margin-bottom: 15px;
