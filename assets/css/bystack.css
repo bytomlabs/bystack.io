@@ -50,7 +50,7 @@ p{
   color: #fff;
 }
 .xs-single-pricing{
-  height: 500px;
+  height: 300px;
 }
 .xs-single-pricing .pricing-img-block{
   margin-left: 0;
@@ -207,8 +207,8 @@ p{
   margin-bottom: 40px;
 }
 .xs-single-pricing{
-  height: 500px;
-  padding-top: 60px;
+  height: 380px;
+  padding-top: 20px;
 }
 .pricing-body > p{
   color: #808A95;
@@ -219,7 +219,7 @@ p{
 }
 .xs-single-pricing .pricing-header .xs-title{
   margin: 25px 0 35px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 
@@ -250,28 +250,71 @@ p{
   box-sizing: border-box;
   height: 218px;
   padding: 40px;
-  background: #FCFCFC;
+  background: #FCFCFC url(../images/blockcenter/background@2x.png) center / 100% no-repeat;
   margin-bottom: 80px;
 }
 .blockcenter .tool h2{
-  color: #1F2021;
+  color: #fff;
   font-size: 32px;
   line-height: 1em;
   margin-bottom: 16px;
   font-weight: 600;
 }
 .blockcenter .tool p{
-  color: #808A95;
+  color: rgba(255, 255, 255, .9);
   font-size: 14px;
   line-height: 28px;
   width: 500px;
+  font-weight: 400;
 }
-.blockcenter{}
+.blockcenter .des{
+  color: #808A95;
+  font-size: 14px;
+  line-height: 28px;
+  padding-top: 18px;
+}
 
+.xs-service-block .service-img{
+  text-align: center
+}
+.xs-service-block .service-img img{
+  width: 96px;
+  height: 96px;
+}
+.hosting-info-list .info-icon img{
+  width: 43px;
+  height: 38px;
+}
+footer .xs-feature-group .feature-img img{
+  display: none;
+}
+footer .col-lg-6:first-child .feature-img{
+  width: 50px;
+  height: 50px;
+  background: url(../images/home/icon-email@2x.png) center / 50px 50px no-repeat;
+}
+footer .col-lg-6:last-child .feature-img{
+  width: 50px;
+  height: 50px;
+  background: url(../images/home/icon-homepage@2x.png) center / 50px 50px no-repeat;
+}
+.xs-logo-wraper{
+  margin-top: 9px;
+}
 
+.menus{
+  color: #808A95;
+  font-size: 14px;
+  float: right;
+  cursor: pointer;
+}
+.home-section .xs-service-block{
+  padding: 0 15px;
+}
 
-
-
+.xs-single-pricing .pricing-img-block{
+  display: none;
+}
 
 
 
