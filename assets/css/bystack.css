@@ -135,7 +135,7 @@ p{
 }
 
 .hosting-info-img>img{
-  height: 300px;
+  height: auto;
   width: 570px;
 }
 .xs-bg-dark h2.content-title{
@@ -330,6 +330,14 @@ footer .col-lg-6:last-child .feature-img{
     display: block;
     padding-top: 20px;
   }
+  .blockcenter .tool{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+  .blockcenter .tool p{
+    width: 100%;
+  }
 }
 
 .logo-mobile-wraper img, .logo-mobile-wraper a{
@@ -339,4 +347,7 @@ footer .col-lg-6:last-child .feature-img{
 
 
 
-
+/* delete */
+.vapor .service-img{
+  display: none;
+}
