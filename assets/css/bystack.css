@@ -316,7 +316,26 @@ footer .col-lg-6:last-child .feature-img{
   display: none;
 }
 
+.logo-mobile-wraper{
+  display: none;
+}
+@media (max-width: 640px) {
+  .logo-mobile-wraper{
+    display: block;
+    float: left;
+    width: 120px;
+    height: 100%;
+  }
+  .xs-header .xs-logo{
+    display: block;
+    padding-top: 20px;
+  }
+}
 
+.logo-mobile-wraper img, .logo-mobile-wraper a{
+  width: 120px;
+  display: block;
+}
 
 
 
