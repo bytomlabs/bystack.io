@@ -1,6 +1,9 @@
 a{
   color: #035BD4;
 }
+a:hover{
+  color: #035BD4;
+}
 p{
   letter-spacing: 0;
 }
@@ -30,6 +33,7 @@ p{
 .btn-outline-primary:hover{
   background-color: rgba(255, 255, 255, .1);
   border-color: rgba(255, 255, 255, .1);
+  color: rgba(255, 255, 255, .9);
 }
 .banner-title{
   font-size: 2.58rem;
@@ -73,11 +77,15 @@ p{
   color: #fff;
 }
 .btn-bytom-primary{
-  border: 2px solid #fff !important;
+  border: 1px solid #fff !important;
   
 }
+.btn-bytom-primary:hover{
+  background: #fff;
+  color: #035BD4;
+}
 .btn-bytom-success{
-  border: 2px solid #91D303 !important;
+  border: 1px solid #91D303 !important;
 }
 .xs-section-padding{
   padding: 80px 0;
