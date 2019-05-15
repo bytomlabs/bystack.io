@@ -104,7 +104,7 @@
           <div class="row">
             <div class="col-lg-6 align-self-center">
               <div class="hosting-info-wraper-2 wow fadeInLeft animated animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;">
-                <h2 style="margin-bottom: 80px;" class="content-title">模型介绍</h2>
+                <h2 style="margin-bottom: 30px;" class="content-title">模型介绍</h2>
                 <div class="media hosting-info-list">
                   <div class="d-flex info-icon">
                     <img src="assets/images/bytom/icon-1-6@2x.png"  draggable="false">
@@ -114,7 +114,7 @@
                       主侧链协同
                     </h4> -->
                     <p>
-                        侧链协议本质上是一种跨区块链解决方案。通过这种解决方案，可以实现数字资产从第一个区块链到第二个区块链的转移，又可以在稍后的时间点从第二个区块链安全返回到第一个区块链。其中第一个区块链通常被称为主区块链或者主链，第二个区块链则被称为侧链。                    </p>
+                        Bystack区块链基础设施采用主侧链（一主多侧）协同工作模型，主链采用 PoW 共识保证多样资产的安全和去中心化，侧链通过可插拔技术实现不同的解决方案，从而满足不同的业务场 和对更高性能的要求，加速区块链商业应用的落地。                    </p>
                   </div>
                 </div>
                 <!-- .hosting-info-list END -->
@@ -125,7 +125,7 @@
                   <div class="media-body">
                     <!-- <h4 class="xs-title small">Vapor</h4> -->
                     <p>
-                        主链需要保证安全和稳定，性能、可扩展性以及更多的创新的尝试会在侧链上落实。                    </p>
+                        主侧链协议本质上是一种跨区块链解决方案。这种解决方案，可以实现数字资产从一条链到另一条链的转移，当然也可以从另一条链安全返回到第一条链。在 Bystack 中，创建、 存储资产的区块链网络通常被称主链，而作为业务辅助的链则被称为侧链。侧链协议被设想为一种允许数字资产在主链与侧链之间进行转移的方式。                    </p>
                   </div>
                 </div>
               </div>
@@ -160,10 +160,7 @@
               <!-- .pricing-header END -->
               <div class="pricing-body">
                 <p>
-                    Bystack的主链是安全稳定、社区公认的比原链主链。主链主要担任价值锚定，价值传输和可信存证的角色。任何的资产创建，传输和销毁都由主链发起，再通过Federation流转到侧链上，从而保证资产的安全性。
-                </p>
-                <p>
-                    同时所有的业务或者资产的数字指纹信息都在主链上做可信存证，因为只有算力保证的主链才能做可信应用。
+                    Bystack的主链采用基于对AI计算友好型PoW算法Tensority的Bytom公链。主链主要担任价值锚定，价值传输和可信存证的角色。任何的资产创建，传输和销毁都由主链发起，再通过 Federation楔入到侧链上，从而保证资产的安全性。同时所有的业务或者资产的数字指纹信息都在主链上做可信存证，因为只有算力保证的主链才能做可信存证。
                 </p>
               </div>
               <!-- .pricing-body END -->
@@ -185,10 +182,13 @@
               <!-- .pricing-header END -->
               <div class="pricing-body">
                 <p>
-                    Bystack的侧链Vapor主要是服务于垂直领域的业务，满足对TPS要求较高，且数据量比较大的业务。同时侧链支持更加灵活的搭建方式，企业或个人可以使用已运行的侧链，也可以生成属于自己的侧链，并在侧链上搭建自己的生态应用。
-                </p>
-                <p>    
-                    侧链支持可插拔的共识，数据库插件，可以更好的搭配以满足实际的业务需求。
+                    主链资产通过Federation楔入到侧链，然后在侧链的内部流通和使用。
+                    Federation当中分为三种角色：
+                    验证人：侧链的出块人，任何人都可以成为验证人。
+                    收集人：监控主链锁定在联邦合约地址的交易，收集交易并生成 Claim 交易，发送到节
+                    点验证人进行验证后进入交易池。
+                    联邦地址：侧链充值是指资产从主链楔入到侧链的转移过程，是需要资产先锁定到联
+                    邦合约地址。
                 </p>
               </div>
               <!-- .pricing-body END -->
@@ -210,10 +210,7 @@
               <!-- .pricing-header END -->
               <div class="pricing-body">
                 <p>
-                    资产从主链转移到侧链的过程，需要资产先锁定到联邦（Federation）合约地址，然后在侧链流通和使用。
-                </p>
-                <p>
-                    联邦合约地址由各联邦成员公钥生成，联邦成员为Vapor用户投票产生，Vapor的任何用户都可以注册成为联邦候选人。
+                    Bystack的侧链主要是服务于垂直领域的业务，满足那些对 TPS 要求较高，且数据量比较大的业务。同时侧链支持更加灵活的搭建方式，企业或个人可以使用已运行的侧链，也可以生成属于自己的侧链，并在侧链上搭建自己的生态应用。侧链支持可插拔的共识，数据库插件，可以更好的搭配以满足实际的业务需求。
                 </p>
               </div>
               <!-- .pricing-body END -->
