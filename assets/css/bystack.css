@@ -344,7 +344,9 @@ footer .col-lg-6:last-child .feature-img{
   width: 120px;
   display: block;
 }
-
+.bystack-framework .media-body>p{
+  padding-right: 0;
+}
 
 
 /* delete */
