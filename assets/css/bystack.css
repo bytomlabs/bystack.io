@@ -101,10 +101,10 @@ p{
   padding: 0 20px;
 }
 .xs-bg-gray{
-  background-color: #F8F8F8;
+  background-color:#fcfcfc;
 }
 .xs-title.small, h4.small{
-  font-size: 1.411rem;
+  font-size: 1.211rem;
 }
 .media-body>p{
   color: #808A95;
@@ -273,6 +273,12 @@ p{
   line-height: 28px;
   padding-top: 18px;
 }
+.blockcenter .content-title{
+  margin-bottom: 90px;
+}
+.center-info{
+  margin-bottom: 0;
+}
 
 .xs-service-block .service-img{
   text-align: center
@@ -348,8 +354,15 @@ footer .col-lg-6:last-child .feature-img{
   padding-right: 0;
 }
 
+.heading-title, .banner-title, .content-title, .heading-title{
+  font-family: sans-serif, Arial, Helvetica;
+}
+
 
 /* delete */
 .vapor .service-img{
+  display: none;
+}
+header .col-lg-10.clearfix{
   display: none;
 }
