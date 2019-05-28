@@ -106,7 +106,7 @@ p{
   color: #808A95;
 }
 .xs-service-block{
-  padding: 0 20px;
+  padding: 0 15px;
 }
 .xs-bg-gray{
   background-color:#fcfcfc;
@@ -116,7 +116,7 @@ p{
 }
 .media-body>p{
   color: #808A95;
-  line-height: 1.65rem;
+  line-height: 1.5rem;
   font-size: 0.82352rem;
   padding-right: 70px;
 }
@@ -176,7 +176,7 @@ p{
 }
 .xs-blog-post .entry-header{
   padding: 16px 0;
-  height: 160px;
+  height: 200px;
   box-shadow: 0px 0px 24px rgba(128,138,149,0.08);
 }
 .footer-group{
@@ -222,7 +222,7 @@ p{
   margin-bottom: 40px;
 }
 .xs-single-pricing{
-  height: 380px;
+  height: 520px;
   padding-top: 20px;
 }
 .pricing-body > p{
@@ -258,7 +258,7 @@ p{
 
 .blockcenter .media-body>p{
   font-size: 15px;
-  padding-right: 85px;
+  padding-right: 35px;
 }
 .blockcenter .tool{
   width: 100%;
@@ -289,7 +289,7 @@ p{
   padding-top: 18px;
 }
 .blockcenter .content-title{
-  margin-bottom: 90px;
+  margin-bottom: 70px;
 }
 .center-info{
   margin-bottom: 0;
