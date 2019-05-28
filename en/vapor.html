@@ -84,14 +84,13 @@
               <div class="xs-banner-content">
                 <!-- <h1 class="banner-sub-title wow fadeInLeft">WE PROVIDE</h1> -->
                 <h2 class="banner-title wow fadeInLeft" data-wow-duration="1.5s">
-                    Vapor侧链
+                    Vapor
                 </h2>
               </div>
             </div>
             <div class="col-md-7 text-right">
               <p>
-                  Bystack区块链基础设施之一 <br>
-                  用于搭建规模化的商业应用
+                  Vapor is one of Bysatck infrastructures<br>to build large-scale commercial applications
               </p>
             </div>
           </div>
@@ -107,7 +106,7 @@
               <div class="col-md-4 mx-auto wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
                 <div class="xs-heading">
                   <!-- <h2 class="heading-sub-title">Best Service</h2> -->
-                  <h3 class="heading-title">Vapor创新性 <span></span></h3>
+                  <h3 class="heading-title">Innovation of Vapor <span></span></h3>
                 </div>
                 <!-- .xs-heading END -->
               </div>
@@ -120,10 +119,11 @@
                     <img src="assets/images/service/service-7.png" alt="hosting service icon" draggable="false">
                   </div>
                   <h4 class="xs-title">
-                    <a>共识层创新</a>
+                    <a>Consensus layer innovation</a>
                   </h4>
                   <p>
-                      Vapor采用DPoS+BBFT的共识模式，以投票人，共识节点和领导节点来组织网络。 首先以DPoS的模式进行投票来选出共识节点，然后共识节点以BBFT的模式来达成共识。                </p>
+                      Vapor adpots DPOS+BBFT mechanism. It achieves consensus with voter (Voter), consensus node (Delegate) and leader node (Leader) to organize the network. First, Delegate is voted through DPoS, and then the Delegate achieve consensus efficiently by a unique BFT model.
+                  </p>
                 </div>
                 <!-- .xs-service-block END -->
               </div>
@@ -133,10 +133,11 @@
                     <img src="assets/images/service/service-8.png" alt="hosting service icon" draggable="false">
                   </div>
                   <h4 class="xs-title">
-                    <a>网络层创新</a>
+                    <a>Network layer innovation</a>
                   </h4>
                   <p>
-                      Vapor神经元中继基于UDP和向前纠错协议, 传输区块头和缩短的交易ID和部分对等节点不具备的交易信息,  接收方节点将尝试使用接收到的信息和本地内存池当中的交易，来重新构建整个区块。                </p>
+                      Vapor Neuron Relay (VNR), based on the UDP and Forward Error Correction ( FEC ) protocol , can transport block header, compacted transaction ID and transaction information that are not available to some peer nodes. The receiving node will attempt to use the information received, and the transaction in the local memory pool (Memory Pool) to reconstruct the entire block. 
+                  </p>
                 </div>
                 <!-- .xs-service-block END -->
               </div>
@@ -146,10 +147,11 @@
                     <img src="assets/images/service/service-9.png" alt="hosting service icon" draggable="false">
                   </div>
                   <h4 class="xs-title">
-                    <a>协议层创新</a>
+                    <a>Protocol layer innovation</a>
                   </h4>
                   <p>
-                      Vapor基于BUTXO可并行验证区块，且可多线程并行验证交易BUTXO， 设计并行滑动窗口验证算法 PSWV，该算法一次同步上百个区块，并获取它的所有输入，然后滑动验证其输出的合法性，形成一个个滑动窗口。                </p>
+                      Based on BUTXO protocol, Vapor can verify blocks in parallel in multiple threads. The Parallel Sliding Windows Validation algorithm (PSWV) can synchronizes hundreds of blocks simultaneously and obtains all its inputs. The block batch forms a verification window and the algorithm verifier slides to verify the validity of the block transaction in the window.
+                  </p>
                 </div>
                 <!-- .xs-service-block END -->
               </div>
@@ -159,10 +161,11 @@
                     <img src="assets/images/service/service-9.png" alt="hosting service icon" draggable="false">
                   </div>
                   <h4 class="xs-title">
-                    <a>存储层创新</a>
+                    <a>Storage layer innovation</a>
                   </h4>
                   <p>
-                      存储层去掉了传统公链本地KV数据库Leveldb，Rocksdb等，替换更通用强大的数据库层接口，满足使用高性能MySQL、PostgreSQL、MongoDB等企业级数据库。兼容HDFS和HIVE，融入Hadoop、Spark生态系统。                </p>
+                      The local KV database like LevelDB and RocksDB, which are commonly used by the public chain, is replaced by a more powerful database interface to meet the needs of MySQL , PostgreSQL, MongoDB and other enterprise-level databases. In addition to the needs of data analysis, the storage layer is compatible with HDFS, HIVE , and integration into the Hadoop or Spark ecosystem.
+                  </p>
                 </div>
                 <!-- .xs-service-block END -->
               </div>
@@ -192,7 +195,8 @@
                           </div>
                           <div class="media-body">
                             <p>
-                                DPoS的原理是让每一个持币者进行投票，选出一定数量的持币者代表,或理解为一定数量的代表节点，并由这些代表节点来完成交易验证和区块生产的工作。持币者可以随时通过投票更换这些代表，以维系链上系统的“长久纯洁性”，保证该协议有充分的去中心化程度。                      </p>
+                                The principle of DPoS is to let each token-holder of the currency vote to select a certain number of delegates, or a certain number of representative nodes. These representative nodes can complete the transaction verification and block production work. Holders can change these representatives at any time by voting to maintain the “long-term purity” and ensure that the agreement is properly decentralized.
+                            </p>
                           </div>
                         </div>
                     </div>
@@ -207,7 +211,8 @@
                       </div>
                       <div class="media-body">
                         <p>
-                            在目前区块链的实现中DPoS共识只用于账户模型， BUTXO模型与DPoS的结合也会有许多额外的优势，BUTXO 模型是存放记录的一种方式，用于交易存储、组织及验证；DPoS 是一种共识算法，用于保证在分布式网络中参与者也可以对交易数据取得一致认识。                      </p>
+                            In the incumbent blockchain model, the DPoS consensus is only used for the account model. The combination of the UTXO model and DPoS also has many additional advantages. The UTXO model is a way to storage for transaction storage, organization and verification; DPoS is a consensus algorithm used to ensure that participants in a distributed network can achieve consensus regarding transaction data.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -228,7 +233,7 @@
                       <div class="xs-heading">
                         <!-- <h2 class="heading-sub-title">Best Service</h2> -->
                         <h3 class="heading-title">BBFT <span></span></h3>
-                        <p class="des">基于实用拜占庭容错（PBFT）的衍生共识</p>
+                        <p class="des">A derived consensu based on PBFT</p>
                       </div>
                       <!-- .xs-heading END -->
                     </div>
@@ -242,10 +247,11 @@
                           </div>
                           <div class="media-body">
                             <h4 class="xs-title small">
-                                配置性
+                                Configurable
                             </h4>
                             <p>
-                               BBFT采用模块化，可插拔设计，按需配置，并在一定程度上保证对新技术的兼容（Future-Proof）。                         </p>
+                                Modular, pluggable design, on-demand configuration, and to a certain extent, compatibility with new technologies ( Future-Proof ).
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -259,10 +265,11 @@
                             </div>
                             <div class="media-body">
                               <h4 class="xs-title small">
-                                  适应性
+                                  Adaptive
                               </h4>
                               <p>
-                                  针对不同的网络环境，提供稳定的执行效率。在BBFT中共识节点维护当前网络拓扑，按最短路径原理相近的节点采取优先通信，对通信的聚合可以进一步降低延时。领导节点（Leader）的角色被弱化，在通信受到阻塞的情况下也不会对整个网络的决策产生巨大影响。                            </p>
+                                  BBFT provides stable execution efficiency for different network environments. In BBFT, the consensus node maintains the current network topology, and the nodes with similar shortest path principles take priority communication, and the aggregation of communication can further reduce the delay. At the same time the role of the leader node (Leader) is weakened. The entire network consensus is not seriously impacted even when the communication with leader nodes are jammed.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -278,9 +285,10 @@
                             <img src="assets/images/vapor/icon-1-12@2x.png"  draggable="false">
                           </div>
                           <div class="media-body">
-                            <h4 class="xs-title small">扩展性</h4>
+                            <h4 class="xs-title small">Scalable</h4>
                             <p>
-                                保证共识复杂度随网络容量线性（Linear）或低于线性（Sub-Linear）增加。BBFT中对消息的有效聚合可以有效的减 少消息发送的次数，从而保证 O(N)的复杂度要求。与网络拓扑相结合，可以把网络分割为 多层结构，消息数据可以在同层内有效共享，以多签聚合的形式跨层传播。                          </p>
+                                BBFT ensures that consensus complexity increases along with network capacity linearly or sub-linearly. Combined with the network topology, the network can be divided into multiple layers, message data can be effectively shared in the same layer, and spread across layers in the form of multi-signal aggregation. 
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -294,9 +302,10 @@
                               <img src="assets/images/vapor/icon-1-12@2x(1).png"  draggable="false">
                             </div>
                             <div class="media-body">
-                              <h4 class="xs-title small">异构性</h4>
+                              <h4 class="xs-title small">Heterogeneous</h4>
                               <p>
-                                  分离共识的验证和通信。采取低耦合的共识框架可以进一步提高网络的可靠性和效率。异构带来的优势还体现在用最优的工具做最适合的事，验证和通信允许运行在不同的系统上，不同的操作环境中，针对不同硬件的算力优势和安全保证（TrustZone）来发挥最大的效能。                            </p>
+                                  Verification and communication of consensus are separated. Adopting a low-coupling consensus framework can further improve the reliability and efficiency of the network. 	One of the advantages of heterogeneity is to do the best things with the best tools. Verification and communication are allowed to run on different systems. In different operating environments, the power of hardware-based hashrate and the Trust Zone are combined to maximize performance.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -315,7 +324,7 @@
                   <div class="col-md-4 mx-auto wow fadeIn animated animated" style="visibility: visible; animation-name: fadeIn;">
                     <div class="xs-heading">
                       <!-- <h2 class="heading-sub-title">Best Service</h2> -->
-                      <h3 class="heading-title">Vapor优势 <span></span></h3>
+                      <h3 class="heading-title">Advantages of Vapor <span></span></h3>
                     </div>
                     <!-- .xs-heading END -->
                   </div>
@@ -328,10 +337,10 @@
                         <img src="assets/images/service/service-7.png" alt="hosting service icon" draggable="false">
                       </div>
                       <h4 class="xs-title">
-                        <a>高性能</a>
+                        <a>High performance</a>
                       </h4>
                       <p>
-                          Vapor的TPS能达到数万，且通过横向扩展吞吐可达百万以上。完全可以满足目前 企业级服务平台的基本应用。平均出块速度约0.5秒，交易及区块大小经过压缩，从而减少带宽开支，让全节点可以更快的同步区块。
+                          Vapor can reach tens of thousands TPS, and the throughput can reach more than one million by extended scaling. It can fully meet enterprise-level needs. The average block speed is about 0.5 seconds. Vapor compresses transactions to reduce block sizes, hence reducing bandwidth and allowing all nodes to synchronize blocks faster.
                         </p>                  </div>
                     <!-- .xs-service-block END -->
                   </div>
@@ -341,10 +350,10 @@
                         <img src="assets/images/service/service-8.png" alt="hosting service icon" draggable="false">
                       </div>
                       <h4 class="xs-title">
-                        <a>高安全</a>
+                        <a>Security</a>
                       </h4>
                       <p>
-                          基于BBFT的共识技术提供高可用的拜占庭容错能力，支持共识状态自动恢复，区块数据互备恢复，数据存储自动均衡，节点服务自动路由。 从而保证系统的自身的安全和稳定。主侧隔离和侧侧隔离保证了各条链的安全稳定运行。
+                          Vapor uses the DPoS+BBFT consensus algorithm to provide high-availability Byzantine fault tolerance, automatic recovery of consensus state, mutual recovery of blockchain data, automatic equalization of data storage,and automatic routing of node services, thereby ensuring the security and stability of the network itself. Mainchain-sidechain isolation and sidechain-sidechain isolation ensure.
                       </p>
                     </div>
                     <!-- .xs-service-block END -->
@@ -355,10 +364,10 @@
                         <img src="assets/images/service/service-9.png" alt="hosting service icon" draggable="false">
                       </div>
                       <h4 class="xs-title">
-                        <a>隐私保护</a>
+                        <a>Privacy Protection</a>
                       </h4>
                       <p>
-                          Vapor采用多种加密算法组合的方案来提供全方位的隐私保护。高可配置性保证了方案的灵活度并能适应不同的用户场景，适用于隐私交易和隐私合约。
+                          Vapor offers a full range of privacy protection with a combination of encryption algorithms. High configurability ensures flexibility and adapts to different user scenarios. It can be applied to privacy protection and privacy contract.
                       </p>
                     </div>
                     <!-- .xs-service-block END -->
@@ -369,10 +378,10 @@
                         <img src="assets/images/service/service-9.png" alt="hosting service icon" draggable="false">
                       </div>
                       <h4 class="xs-title">
-                        <a>支持Bancor</a>
+                        <a>Support Bancor protocol</a>
                       </h4>
                       <p>
-                          Bancor是一个去中心化的流动性网络，为用户提供简单、低成本的买卖Token的方式。Bystack的bancor协议可以让多种资产(比如商业积分，多种数字资产)可以快速，低成本，高效的转换。
+                          Bancor is a decentralized liquidity network that provides users with a simple, low-cost way to buy and sell tokens.	Bystack 's Bancor protocol allows multiple assets (such as business royalty, multiple digital assets) to be converted quickly, cost-effectively and efficiently.
                       </p>
                     </div>
                     <!-- .xs-service-block END -->
@@ -402,7 +411,7 @@
                     <img src="" draggable="false" />
                   </div>
                   <div class="media-body feature-content">
-                    <h4 class="xs-title">联系邮箱</h4>
+                    <h4 class="xs-title">Email</h4>
                     <p>contact@bystack.io</p>
                   </div>
                 </div>
@@ -419,7 +428,7 @@
                     <img src="" draggable="false" />
                   </div>
                   <div class="media-body feature-content">
-                    <h4 class="xs-title">官方网站</h4>
+                    <h4 class="xs-title">Website</h4>
                     <p>bystack.io</p>
                   </div>
                 </div>
