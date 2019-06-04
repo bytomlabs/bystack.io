@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "bystack",
+  "description": null,
+  "icons": {
+    "60": "/icons-e0a9ebb9e324197e6efec7b57faad356/firefox_app_60x60.png",
+    "128": "/icons-e0a9ebb9e324197e6efec7b57faad356/firefox_app_128x128.png",
+    "512": "/icons-e0a9ebb9e324197e6efec7b57faad356/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}
