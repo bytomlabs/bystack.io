@@ -11,9 +11,9 @@
 <url> <loc>http://localhost:8128/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://localhost:8128/zh/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://localhost:8128/en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8128/node/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8128/zh/node/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://localhost:8128/en/node/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://localhost:8128/node_detail/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://localhost:8128/zh/node_detail/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://localhost:8128/en/node_detail/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://localhost:8128/zh/404.html</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://localhost:8128/en/404.html</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
