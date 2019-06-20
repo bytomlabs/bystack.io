@@ -381,3 +381,24 @@ footer .col-lg-6:last-child .feature-img{
 header .col-lg-10{
   /* display: none; */
 }
+@media (max-width: 640px){
+  .new-menu{
+    display: none;
+  }
+}
+.new-menu{
+  float: left;
+  width: 200px;
+  height: 72px;
+  line-height: 72px;
+}
+.new-menu li{
+  float: left;
+  margin-left: 30px;
+}
+.new-menu a{
+  color: #1F2021;
+}
+.new-menu a:hover{
+  color: #035BD4;
+}
