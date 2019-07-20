@@ -5,6 +5,9 @@
 <url> <loc>http://localhost:8128/apply/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://localhost:8128/zh/apply/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://localhost:8128/en/apply/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://localhost:8128/bycoin/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://localhost:8128/zh/bycoin/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://localhost:8128/en/bycoin/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://localhost:8128/detail/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://localhost:8128/zh/detail/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://localhost:8128/en/detail/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
