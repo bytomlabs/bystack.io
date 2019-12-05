@@ -14,20 +14,21 @@ import DevTool from '../components/home/DevTool';
 import News from '../components/News';
 
 const Home = () => (
-  <Layout home>
-    <SEO
-      title="Bystack" 
+  'hello.'
+  // <Layout home>
+  //   <SEO
+  //     title="Bystack" 
       
-    />
-    <Slide />
-    <Feature />
-    <Platform />
-    <Infrastructure />
-    <Blockcenter />
-    <Apps />
-    <DevTool />
-    {/* <News home /> */}
-  </Layout>
+  //   />
+  //   <Slide />
+  //   <Feature />
+  //   <Platform />
+  //   <Infrastructure />
+  //   <Blockcenter />
+  //   <Apps />
+  //   <DevTool />
+  //   {/* <News home /> */}
+  // </Layout>
 );
 
 export default Home;
