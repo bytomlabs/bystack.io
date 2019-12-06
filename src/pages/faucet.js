@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import css from 'styled-components';
 import { FormattedMessage as Msg } from 'gatsby-plugin-intl';
+import _ajax from 'axios';
 
 import SEO from '../components/Seo';
 import { PageHeader, Avatar, Input, Select, Button } from 'antd';
+
+const apiHost = 'http://52.82.24.162:5000/api/v1/get_testnet_coins';
 
 const Cont = css.div`
   padding: 20px 16px;
@@ -16,6 +19,18 @@ const W = css.div``;
 
 const Home = () => {
   const [curAsset, setCurAsset] = useState('btm');
+  const [curAddress, setAddress] = useState('');
+
+  const handleSubmit = () => {
+    _ajax
+      .post(apiHost, {asset: curAsset, address: curAddress})
+      .then(res => {
+        console.log(res.data)
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
 
   return  (
     <>
@@ -43,6 +58,8 @@ const Home = () => {
         <Input
           allowClear
           style={{ width: '100%', margin: '10px 0 25px' }}
+          value={curAddress}
+          onChange={e => setAddress(e.target.value)}
           placeholder="请输入钱包地址"
         />
         <Button 
@@ -51,6 +68,7 @@ const Home = () => {
           size="large" 
           type="primary"
           style={{ marginTop: 20 }}
+          onClick={handleSubmit}
         >领取资产</Button>
       </Cont>
     </>
