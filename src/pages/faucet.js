@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import css from 'styled-components';
 import { FormattedMessage as Msg } from 'gatsby-plugin-intl';
 import _ajax from 'axios';
@@ -41,6 +41,21 @@ let timer = null;
 const Home = () => {
   const [curAsset, setCurAsset] = useState('usdt');
   const [curAddress, setAddress] = useState('');
+  const [countdown, setCountdown] = useState(6);
+  const timer = useRef(null);
+
+  const handleCountdown = () => {
+    timer.current = setInterval(() => {
+      setCountdown(cur => cur - 1);
+    }, 1000);
+  }
+
+  useEffect(() => {
+    if(countdown === 0) {
+      timer.current && clearInterval(timer.current);
+      setCountdown(6);
+    }
+  }, [countdown])
 
   useEffect(() => {
     try {
@@ -73,8 +88,17 @@ const Home = () => {
   }
 
   const handleSubmit = () => {
+    setCountdown(5);
+    handleCountdown();
+    try {
+      if(!curAddress) {
+        getAccountInfo();
+      }
+    } catch (error) {
+      console.log(error);
+    }
     _ajax
-      .post(apiHost, {asset: curAsset, address: 'tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc'})
+      .post(apiHost, {asset: curAsset, address: curAddress})   // tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc
       .then(res => {
         if(res.data.tx_id) {
           message.success('领取成功 Success');
@@ -109,17 +133,12 @@ const Home = () => {
           <Select.Option value="eth">ETH</Select.Option>
           <Select.Option value="btm">BTM</Select.Option>
         </Select>
-        {/* <Input.TextArea
-          // allowClear
-          style={{ width: '100%', margin: '10px 0 25px' }}
-          value={curAddress}
-          onChange={e => setAddress(e.target.value)}
-          placeholder="请输入钱包地址"
-          readOnly
-        /> */}
-        <Button 
-          onClick={handleSubmit}
-        >领取 Get</Button>
+        {
+          countdown === 6 ? (
+            <Button onClick={handleSubmit}>领取 Get</Button>
+          ) : <Button style={{opacity: '.7'}}>领取 Get ({countdown})</Button>
+        }
+        
         
         <Address>
           <Title>我的地址 <span style={{color: 'rgba(0, 0, 0, 0.45)'}}>Address</span>: </Title>

@@ -14,7 +14,7 @@ import DevTool from '../components/home/DevTool';
 import News from '../components/News';
 
 const Home = () => (
-  'hello.'
+  ''
   // <Layout home>
   //   <SEO
   //     title="Bystack" 
