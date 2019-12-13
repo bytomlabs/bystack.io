@@ -23,15 +23,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Bytom`,
-        short_name: `bytom`,
-        start_url: `/`,
-        icon: `src/images/favicon.png`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `Bytom`,
+    //     short_name: `bytom`,
+    //     start_url: `/`,
+    //     icon: `src/images/favicon.png`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -47,15 +47,15 @@ module.exports = {
     //     }
     //   }
     // },
-    {
-      resolve: `gatsby-plugin-intl`,
-      options: {
-        path: `${__dirname}/src/config/i18n`,
-        languages: ['zh', 'en'],
-        defaultLanguage: `zh`,
-        redirect: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-intl`,
+    //   options: {
+    //     path: `${__dirname}/src/config/i18n`,
+    //     languages: ['zh', 'en'],
+    //     defaultLanguage: `zh`,
+    //     redirect: true,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-antd',
       options: {

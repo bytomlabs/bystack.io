@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import css from 'styled-components';
-import { FormattedMessage as Msg } from 'gatsby-plugin-intl';
 import _ajax from 'axios';
 
-import SEO from '../components/Seo';
 import { PageHeader, Avatar, Input, Select, message } from 'antd';
 
 const apiHost = 'http://52.82.24.162:5000/api/v1/get_testnet_coins';
@@ -112,9 +110,6 @@ const Home = () => {
 
   return  (
     <>
-      <SEO
-        title="MOV水龙头" 
-      />
       <PageHeader
         style={{ borderBottom: '1px solid rgb(235, 237, 240)', }}
         title={<span style={{ color: 'rgb(228, 176, 90)' }}>MOV水龙头</span>}
