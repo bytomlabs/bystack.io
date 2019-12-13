@@ -1,1 +1,0 @@
-import './src/static/css/main.css';

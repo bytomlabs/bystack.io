@@ -5,7 +5,7 @@ module.exports = {
     author: `bytom`,
     siteUrl: 'http://localhost:8128',
   },
-  // pathPrefix: '/node',
+  pathPrefix: '/faucet',
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
