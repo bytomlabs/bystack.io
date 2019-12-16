@@ -36,11 +36,18 @@ const Button = css.div`
 `;
 const W = css.div``;
 let timer = null;
+let defaultAddress = '';
 const Home = () => {
+  try {
+    if(window.bytom) {
+      defaultAddress = window.bytom.default_account.address;
+    }
+  } catch (error) {}
   const [curAsset, setCurAsset] = useState('usdt');
-  const [curAddress, setAddress] = useState('');
+  const [curAddress, setAddress] = useState(defaultAddress);
   const [countdown, setCountdown] = useState(6);
   const timer = useRef(null);
+  const getBytomInfoTimer = useRef(null);
 
   const handleCountdown = () => {
     timer.current = setInterval(() => {
@@ -58,7 +65,10 @@ const Home = () => {
   useEffect(() => {
     try {
       if(window) {
-        document.addEventListener('chromeBytomLoaded', bytomExtension => {
+        document.addEventListener('chromeBytomLoaded', function (res) {
+          window.bytom.enable(true).then(res => {
+            getAccountInfo();
+          });
           getAccountInfo();
         });
       }
@@ -69,17 +79,16 @@ const Home = () => {
 
   
 
-  const getAccountInfo = async () => {
+  const getAccountInfo = () => {
     try {
-      const account = await window.bytom.enable();
-      console.log(account.address)
-      if(account.address) {
-        setAddress(account.address);
-        timer && clearTimeout(timer);
+      const address = window.bytom.default_account.address;
+      if(address) {
+        setAddress(address);
+        getBytomInfoTimer.current && clearTimeout(getBytomInfoTimer.current);
       }
     } catch (error) {
       console.log(error);
-      timer = setTimeout(() => {
+      getBytomInfoTimer.current = setTimeout(() => {
         getAccountInfo();
       }, 1000);
     }

@@ -7,7 +7,7 @@ module.exports = {
   },
   pathPrefix: '/faucet',
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    // `gatsby-plugin-react-helmet`,
     // {
     //   resolve: `gatsby-plugin-sitemap`,
     //   options: {
