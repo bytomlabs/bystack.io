@@ -27,8 +27,8 @@ const Button = css.div`
   text-align: center;
   font-size: 16px;
   border-radius: 4px;
-  color: #000;
-  background-color: rgba(228, 176, 90);
+  color: #fff;
+  background-color: #035BD4;
   cursor: pointer;
   &:active {
     opacity: .8;
@@ -125,7 +125,7 @@ const Home = () => {
     <>
       <PageHeader
         style={{ borderBottom: '1px solid rgb(235, 237, 240)', }}
-        title={<span style={{ color: 'rgb(228, 176, 90)' }}>MOV水龙头</span>}
+        title={<span style={{ color: '#035BD4' }}>MOV水龙头</span>}
         subTitle={<p style={{textAlign: 'right', margin: 0}}>MOV Faucets</p>}
       ></PageHeader>
       <Cont>
