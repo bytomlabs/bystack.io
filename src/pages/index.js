@@ -28,7 +28,7 @@ const Button = css.div`
   font-size: 16px;
   border-radius: 4px;
   color: #000;
-  background: rgba(228, 176, 90);
+  background-color: rgba(228, 176, 90);
   cursor: pointer;
   &:active {
     opacity: .8;
@@ -104,7 +104,8 @@ const Home = () => {
     } catch (error) {
       console.log(error);
     }
-    _ajax
+    try {
+      _ajax
       .post(apiHost, {asset: curAsset, address: curAddress})   // tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc
       .then(res => {
         if(res.data.tx_id) {
@@ -114,7 +115,10 @@ const Home = () => {
       .catch(err => {
         console.log(err);
         message.error('领取失败 Fail');
-      })
+      });
+    } catch (error) {
+      message.error('领取失败 Fail');
+    }
   }
 
   return  (
@@ -146,7 +150,7 @@ const Home = () => {
         
         <Address>
           <Title>我的地址 <span style={{color: 'rgba(0, 0, 0, 0.45)'}}>Address</span>: </Title>
-          <p>{curAddress}</p>
+          <p>{curAddress || '---'}</p>
         </Address>
       </Cont>
     </>
