@@ -35,6 +35,12 @@ const Button = css.div`
   }
 `;
 const W = css.div``;
+const assetAmount = {
+  btm: '200 BTM',
+  btc: '0.01 BTC',
+  usdt: '100 USDT',
+  eth: '0.5 ETH',
+};
 let timer = null;
 let defaultAddress = '';
 const Home = () => {
@@ -109,7 +115,7 @@ const Home = () => {
       .post(apiHost, {asset: curAsset, address: curAddress})   // tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc
       .then(res => {
         if(res.data.tx_id) {
-          message.success('领取成功 Success');
+          message.success(`领取成功 ${assetAmount[curAsset]} Success`);
         }
       })
       .catch(err => {
