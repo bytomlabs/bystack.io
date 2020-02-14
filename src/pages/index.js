@@ -49,7 +49,7 @@ const Home = () => {
       defaultAddress = window.bytom.default_account.address;
     }
   } catch (error) {}
-  const [curAsset, setCurAsset] = useState('usdt');
+  const [curAsset, setCurAsset] = useState('btc');
   const [curAddress, setAddress] = useState(defaultAddress);
   const [countdown, setCountdown] = useState(6);
   const timer = useRef(null);
@@ -142,7 +142,6 @@ const Home = () => {
           size="large"
           style={{ width: '100%', margin: '10px 0 25px' }}
         >
-          <Select.Option value="usdt">USDT</Select.Option>
           <Select.Option value="btc">BTC</Select.Option>
           <Select.Option value="eth">ETH</Select.Option>
           <Select.Option value="btm">BTM</Select.Option>
