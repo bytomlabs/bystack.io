@@ -2,7 +2,7 @@
   "name": "bystack.com",
   "private": true,
   "description": "",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "@bytom",
   "dependencies": {
     "antd": "^3.20.3",
