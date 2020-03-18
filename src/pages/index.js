@@ -112,7 +112,7 @@ const Home = () => {
     }
     try {
       _ajax
-      .post(apiHost, {asset: curAsset, address: 'tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc'})   // tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc
+      .post(apiHost, {asset: curAsset, address: curAddress})   // tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc
       .then(res => {
         if(res.data.tx_id) {
           message.success(`领取成功 ${assetAmount[curAsset]} Success`);
