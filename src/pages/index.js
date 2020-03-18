@@ -4,7 +4,7 @@ import _ajax from 'axios';
 
 import { PageHeader, Avatar, Input, Select, message } from 'antd';
 
-const apiHost = 'http://52.82.24.162:5000/api/v1/get_testnet_coins';
+const apiHost = 'https://api.bymov.io/faucet/api/v1/get_testnet_coins';
 
 const Cont = css.div`
   padding: 20px 16px;
@@ -112,7 +112,7 @@ const Home = () => {
     }
     try {
       _ajax
-      .post(apiHost, {asset: curAsset, address: curAddress})   // tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc
+      .post(apiHost, {asset: curAsset, address: 'tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc'})   // tp1qjchcu4qlny2xq508mp4a2ekptk5dkugdlseekc
       .then(res => {
         if(res.data.tx_id) {
           message.success(`领取成功 ${assetAmount[curAsset]} Success`);
