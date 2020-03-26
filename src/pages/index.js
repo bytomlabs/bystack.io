@@ -72,9 +72,13 @@ const Home = () => {
     try {
       if(window) {
         document.addEventListener('chromeBytomLoaded', function (res) {
+          console.log('chromeBytomLoaded')
           window.bytom.enable(true).then(res => {
             getAccountInfo();
           });
+          getAccountInfo();
+        });
+        window.bytom.enable(true).then(res => {
           getAccountInfo();
         });
       }
@@ -86,6 +90,7 @@ const Home = () => {
   
 
   const getAccountInfo = () => {
+    console.log('getAccountInfo');
     try {
       const address = window.bytom.default_account.address;
       if(address) {
